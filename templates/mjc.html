@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+{% load static %} 
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/mjc.css' %}">
+    <title>Automatic Answer Cheker</title>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{% static 'images/logo.jpg'%}" alt="logo" class="logo">
+        </div>
+        <div class="title">
+            <h1></h1>
+            <p>MOOLJI JAITHA COLLAGE,JALGAON</p>
+            <P>"An Autonomous Collage Affiiliated to K.B.C N.M.U,Jalgaon</P>
+        </div>
+        <div class="list">
+
+            <a href="/about/">About</a>
+
+            <a href="/contact/">Contact</a>
+
+            <a href="">Student</a>
+
+            <a href="/admin/">Admin</a>
+
+
+        </div>
+
+    </nav>
+    <form method="post">
+        {% csrf_token %}
+        <div class="container">
+            <center>
+                <h1> Student Registeration Form</h1>
+            </center>
+            <hr>
+            <label> Firstname </label>
+            <input type="text" name="firstname" placeholder="Firstname" size="15" required />
+            <label> Middlename: </label>
+            <input type="text" name="middlename" placeholder="Middlename" size="15" required />
+            <label> Lastname: </label>
+            <input type="text" name="lastname" placeholder="Lastname" size="15" required />
+            <div>
+                <label> 
+      Course :
+      </label>
+
+                <select>
+      <option name="cource" value="Course">Course</option>
+      <option name="bca" value="BCA">BCA</option>
+      <option name="choice" value="BBA">BBA</option>
+      <option name="choice" value="B.Tech">B.Tech</option>
+      <option name="choice" value="MBA">MBA</option>
+      <option name="choice" value="MCA">MCA</option>
+      <option name="choice" value="M.Tech">M.Tech</option>
+      </select>
+            </div>
+            <div>
+                <label> 
+      Gender :
+      </label><br>
+                <input type="radio" value="Male" name="gender" checked> Male
+                <input type="radio" value="Female" name="gender"> Female
+                <input type="radio" value="Other" name="gender"> Other
+
+            </div>
+            <label> 
+      Phone :
+      </label>
+            <input type="text" name="country code" placeholder="Country Code" value="+91" size="2" readonly/>
+            <input type="text" maxlength="9999999999" name="phone" placeholder="phone no." size="10" / required> Current Address :
+            <textarea cols="80" rows="5" name="address" placeholder="Current Address" value="address" required> </textarea>
+            <button type="submit" class="registerbtn">Registration</button>
+
+        </div>
+    </form>
+    <div class="footer">
+        <div class="footer">
+
+            <div class="t2">
+
+                <h2>Moolji Jaitha Collage </h2>
+
+                <p> M J collage Road shivram nagar<br> Jalgaon
+
+                </p>
+
+            </div>
+
+            <div class="contact">
+
+                <p>Phone: 8572889968<br> Email: rohitshiv856@gmail.com<br> Web: mjcollage.com</p>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
